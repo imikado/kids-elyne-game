@@ -1,0 +1,155 @@
+[gd_scene load_steps=10 format=4 uid="uid://cmgic7vy0qtxy"]
+
+[ext_resource type="Texture2D" uid="uid://ddx1u4yxy7bn0" path="res://src/game/levels/Level01/cloud.png" id="1_631ed"]
+[ext_resource type="PackedScene" uid="uid://ossnpycx4aal" path="res://src/game/actors/player.tscn" id="1_jbar0"]
+[ext_resource type="Texture2D" uid="uid://db8vvarqna0vd" path="res://src/game/levels/Level01/trees.png" id="2_h08pn"]
+[ext_resource type="PackedScene" uid="uid://cv6mghqea54as" path="res://src/game/actors/enemies/slime.tscn" id="4_1jlss"]
+[ext_resource type="PackedScene" uid="uid://bjtsbc0jvn38x" path="res://src/game/actors/enemies/limit_enemy.tscn" id="4_4ky1b"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h08pn"]
+texture = ExtResource("1_631ed")
+texture_region_size = Vector2i(4, 4)
+0:0/0 = 0
+1:0/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+2:1/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+7:0/0 = 0
+6:0/0 = 0
+5:0/0 = 0
+4:0/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1jlss"]
+tile_size = Vector2i(4, 4)
+sources/0 = SubResource("TileSetAtlasSource_h08pn")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jlss"]
+texture = ExtResource("2_h08pn")
+texture_region_size = Vector2i(16, 32)
+0:0/0 = 0
+1:0/0 = 0
+7:3/0 = 0
+6:3/0 = 0
+5:3/0 = 0
+4:3/0 = 0
+3:3/0 = 0
+3:2/0 = 0
+2:2/0 = 0
+2:1/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+6:1/0 = 0
+5:1/0 = 0
+4:1/0 = 0
+3:1/0 = 0
+6:2/0 = 0
+5:2/0 = 0
+7:1/0 = 0
+7:0/0 = 0
+7:2/0 = 0
+4:2/0 = 0
+1:2/0 = 0
+0:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+6:4/0 = 0
+5:4/0 = 0
+4:4/0 = 0
+3:4/0 = 0
+2:4/0 = 0
+7:4/0 = 0
+7:5/0 = 0
+6:6/0 = 0
+5:6/0 = 0
+4:6/0 = 0
+3:6/0 = 0
+2:6/0 = 0
+1:6/0 = 0
+0:6/0 = 0
+0:5/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4ky1b"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_1jlss")
+
+[node name="Level01" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 798.0
+offset_bottom = 240.0
+color = Color(0.30545598, 0.24061275, 0.7807115, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = -1.0
+offset_top = 240.0
+offset_right = 800.0
+offset_bottom = 433.0
+color = Color(0.35855395, 0.50145876, 0.30439678, 1)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-1, 240)
+tile_map_data = PackedByteArray("AAAYAPn/AAAAAAEAAAAYAPr/AAAAAAIAAAAZAPn/AAABAAEAAAAZAPr/AAABAAIAAAAaAPn/AAACAAEAAAAaAPr/AAACAAIAAAA2AO7/AAAAAAEAAAA2AO//AAAAAAIAAAA3AO7/AAABAAEAAAA3AO//AAABAAIAAAA4AO7/AAACAAEAAAA4AO//AAACAAIAAABHAPz/AAAAAAEAAABHAP3/AAAAAAIAAABIAPz/AAABAAEAAABIAP3/AAABAAIAAABJAPz/AAACAAEAAABJAP3/AAACAAIAAABkAPD/AAAAAAEAAABkAPH/AAAAAAIAAABlAPD/AAABAAEAAABlAPH/AAABAAIAAABmAPD/AAACAAEAAABmAPH/AAACAAIAAABsAPv/AAAAAAEAAABsAPz/AAAAAAIAAABtAPv/AAABAAEAAABtAPz/AAABAAIAAABuAPv/AAACAAEAAABuAPz/AAACAAIAAACQAPH/AAAAAAEAAACQAPL/AAAAAAIAAACRAPH/AAABAAEAAACRAPL/AAABAAIAAACSAPH/AAACAAEAAACSAPL/AAACAAIAAAApAPf/AAADAAEAAAAqAPf/AAAEAAEAAABKAO7/AAADAAEAAABLAO7/AAAEAAEAAABdAPr/AAADAAEAAABeAPr/AAAEAAEAAACAAPH/AAADAAEAAACBAPH/AAAEAAEAAABXAOn/AAADAAEAAABYAOn/AAAEAAEAAAA=")
+tile_set = SubResource("TileSet_1jlss")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="."]
+z_as_relative = false
+position = Vector2(-1, 240)
+tile_map_data = PackedByteArray("AAAFAP//AAAAAAAAAAAHAAIAAAAAAAAAAAAKAP//AAAAAAAAAAANAAIAAAAAAAAAAAAPAP//AAAAAAAAAAATAAIAAAABAAAAAAALAAEAAAABAAAAAAADAAEAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_4ky1b")
+
+[node name="Player" parent="." instance=ExtResource("1_jbar0")]
+z_as_relative = false
+position = Vector2(302, 243)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-4, 4)
+
+[node name="enemies" type="Node2D" parent="."]
+position = Vector2(-1, 240)
+
+[node name="limitEnemy" parent="enemies" instance=ExtResource("4_4ky1b")]
+position = Vector2(429, 21)
+
+[node name="limitEnemy2" parent="enemies" instance=ExtResource("4_4ky1b")]
+position = Vector2(318, 19)
+
+[node name="Slime" parent="enemies" instance=ExtResource("4_1jlss")]
+position = Vector2(375, 21)
