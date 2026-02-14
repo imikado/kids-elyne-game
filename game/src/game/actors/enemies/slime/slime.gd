@@ -15,6 +15,7 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	velocity.x = _direction * SPEED*delta
+	velocity.y=0
 	
 	move_and_slide()
 	

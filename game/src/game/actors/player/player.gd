@@ -11,7 +11,7 @@ const WALK_RIGHT='walk-right'
 const SPEED = 50.0
 const JUMP_VELOCITY = -400.0
 
-var _animation:String=IDLE
+var _animation:String=''
 
 @onready var _animationPlayer=$AnimationPlayer
 
