@@ -258,14 +258,16 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mwn36"]
-size = Vector2(20, 9)
+size = Vector2(9, 9)
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 floor_block_on_wall = false
 platform_on_leave = 2
 script = ExtResource("1_7bi4p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -273,5 +275,5 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3.5)
+position = Vector2(-0.5, -4.5)
 shape = SubResource("RectangleShape2D_mwn36")
